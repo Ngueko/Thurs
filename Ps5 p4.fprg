@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ba97421"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-21 12:42:23 PM"/>
+        <attribute name="created" value="YmE5NzQyMTtIQ1NUVS1CTjJaN0MzOzIwMjMtMDktMjE7MTI6MTE6MzIgUE07MjYyNA=="/>
+        <attribute name="edited" value="YmE5NzQyMTtIQ1NUVS1CTjJaN0MzOzIwMjMtMDktMjE7MTI6NDI6MjMgUE07MTsyNzM2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="wcost" type="Real" array="False" size=""/>
+            <declare name="app" type="Real" array="False" size=""/>
+            <declare name="totalcost" type="Real" array="False" size=""/>
+            <input variable="name"/>
+            <input variable="app"/>
+            <if expression="app&gt;1000">
+                <then>
+                    <assign variable="wcost" expression="0.1"/>
+                </then>
+                <else>
+                    <assign variable="wcost" expression="0.05"/>
+                </else>
+            </if>
+            <assign variable="totalcost" expression="app + wcost"/>
+            <if expression="app&gt;1000">
+                <then>
+                    <assign variable="app" expression="0.1"/>
+                </then>
+                <else>
+                    <assign variable="app" expression="0.05"/>
+                </else>
+            </if>
+            <output expression="&quot;Name: &quot; &amp; name" newline="True"/>
+            <output expression="&quot;Cost of appliance: &quot; &amp; app" newline="True"/>
+            <output expression="&quot;Total cost: &quot; &amp; totalcost" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
